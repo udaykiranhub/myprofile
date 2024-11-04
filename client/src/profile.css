@@ -1,19 +1,49 @@
+/* profile.css */
 
-
-.profile{
-    border:1px solid black;
-   border-top-left-radius: 15%;
-   border-bottom-right-radius: 15%;
+.profile {
+    border: 1px solid #e0e0e0;
+    border-radius: 15%;
     animation-name: profile;
     animation-duration: 8s;
     animation-iteration-count: infinite;  
- 
+    background-color: #f9f9f9; /* Light background for better contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    font-size: 2rem; /* Larger font size for the name */
+    font-weight: bold;
+    color: #333; /* Dark color for the name */
+}
+
+.contact-info {
+    color: #555; /* Slightly lighter color for contact info */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Space out contact information */
 }
 
 @keyframes profile {
-    0%{background-color: rgb(128, 11, 224)}
+    0% { background-color: rgb(128, 11, 224); }
+    50% { background-color: rgba(32, 221, 231, 0.724); }
+    100% { background-color: rgb(21, 21, 234); }
+}
 
-    50%{background-color: rgba(32, 221, 231, 0.724);}
-    100%{background-color: rgb(21, 21, 234);}
-    
+/* Card hover effect */
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }

@@ -1,81 +1,76 @@
-li {
-  list-style-type: none;
-  /* background-color: rgb(209, 230, 230); */
-  float: none;
-  margin: 30px;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 60px;
-}
-.no-underline {
-  text-decoration: none;
-  color: inherit; /* This ensures that the link color remains the same as the surrounding text */
-}
-li:hover {
-  background-color: black;
-  color: rgb(255, 255, 255);
 
+.toggle-container {
+  position: relative;
 }
 
-ul {
- 
-background-image: linear-gradient("blue,black,yellow");
-  display:flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-nav {
- /* background-color: aqua; */
-
- 
-}
-
+/* Toggle button styling */
 .menu-toggle {
-  display: none; /* Initially hidden, will be shown on smaller screens */
+  font-size: 24px;
   background: none;
   border: none;
-  color:black;
-  padding: 10px;
+  cursor: pointer;
+  color: black;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+
+}
+
+/* Full-screen menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.menu.open {
+  display: flex;
+}
+
+/* Styling for the menu items */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: cyan;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Icon styles for open and close */
+.hamburger-icon,
+.close-icon {
+  font-size: 32px;
+  color: black;
   cursor: pointer;
 }
-
-@media screen and (max-width: 600px) {
-  .menu-toggle {
-      display: block; /* Show the toggle button on smaller screens */
-  }
-  
-  ul {
-      display: none; /* Hide the menu by default */
-      float: none;
-      padding: 0;
-      text-align: center;
-  }
-  
-  ul.open {
-      display: block; /* Show the menu when it's open */
-  }
-  
-  li {
-      float: none;
-      margin: 10px 0; /* Adjust margins for vertical spacing */
-  }
-  
-  nav {
-      display: block;
-  }
-}
-
-
-
-li{
-
-  border:2px solid black;
-
-}
-
-
-
-  
-
